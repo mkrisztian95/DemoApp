@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionsHeaderView" customModule="FinanceMonitor" customModuleProvider="target">
+            <connections>
+                <outlet property="creditBalanceLabel" destination="3lq-Lf-h8s" id="oCj-Vc-87l"/>
+                <outlet property="heightConstraint" destination="0sI-4Q-DaV" id="GIB-b5-TmV"/>
+                <outlet property="overallBalanceLabel" destination="FOS-RE-TBT" id="VkI-GA-pEk"/>
+                <outlet property="overallBalanceLeadingConstraint" destination="OCu-zB-hkG" id="0f2-xC-32T"/>
+                <outlet property="ownBalanceLabel" destination="iA2-4p-Bm5" id="c0X-rf-oKz"/>
+                <outlet property="priceLabelCenterConstraint" destination="P4e-8f-1Sg" id="3ED-67-woi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="585" height="213"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiV-p6-tnC">
+                    <rect key="frame" x="0.0" y="0.0" width="585" height="213"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOS-RE-TBT" customClass="PriceLabel" customModule="FinanceMonitor" customModuleProvider="target">
+                            <rect key="frame" x="24" y="24" width="537" height="0.0"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lq-Lf-h8s" customClass="PriceLabel" customModule="FinanceMonitor" customModuleProvider="target">
+                            <rect key="frame" x="24" y="36" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-4p-Bm5" customClass="PriceLabel" customModule="FinanceMonitor" customModuleProvider="target">
+                            <rect key="frame" x="24" y="48" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="iA2-4p-Bm5" firstAttribute="top" secondItem="3lq-Lf-h8s" secondAttribute="bottom" constant="12" id="0a7-hf-Nwj"/>
+                        <constraint firstAttribute="height" priority="999" constant="213" id="0sI-4Q-DaV"/>
+                        <constraint firstItem="3lq-Lf-h8s" firstAttribute="top" secondItem="FOS-RE-TBT" secondAttribute="bottom" constant="12" id="7ns-qS-99R"/>
+                        <constraint firstItem="iA2-4p-Bm5" firstAttribute="leading" secondItem="OiV-p6-tnC" secondAttribute="leading" constant="24" id="Ffy-uH-HkG"/>
+                        <constraint firstItem="FOS-RE-TBT" firstAttribute="leading" secondItem="OiV-p6-tnC" secondAttribute="leading" constant="24" id="OCu-zB-hkG"/>
+                        <constraint firstItem="FOS-RE-TBT" firstAttribute="centerX" secondItem="OiV-p6-tnC" secondAttribute="centerX" id="P4e-8f-1Sg"/>
+                        <constraint firstItem="FOS-RE-TBT" firstAttribute="top" secondItem="OiV-p6-tnC" secondAttribute="top" constant="24" id="fgs-SV-DBd"/>
+                        <constraint firstItem="3lq-Lf-h8s" firstAttribute="leading" secondItem="OiV-p6-tnC" secondAttribute="leading" constant="24" id="lwo-Cj-jib"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="OiV-p6-tnC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HqQ-pX-Qsu"/>
+                <constraint firstAttribute="bottom" secondItem="OiV-p6-tnC" secondAttribute="bottom" id="IVY-cV-BQ0"/>
+                <constraint firstItem="OiV-p6-tnC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cYr-N9-vCP"/>
+                <constraint firstAttribute="trailing" secondItem="OiV-p6-tnC" secondAttribute="trailing" id="qPp-z7-cf4"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="75.572519083969468" y="-161.61971830985917"/>
+        </view>
+    </objects>
+</document>

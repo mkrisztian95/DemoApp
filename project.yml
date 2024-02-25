@@ -1,0 +1,76 @@
+name: FinanceMonitor
+
+packages:
+    CMExtensions:
+        github: mkrisztian95/CMExtensions
+        branch: main
+    Depin:
+        github: KOMA-Inc/Depin
+        from: 3.0.0
+    XCoordinator:
+        github: QuickBirdEng/XCoordinator
+        from: 2.0.0
+    Lottie:
+        github: airbnb/lottie-ios.git
+        from: 3.0.0
+
+options:
+    createItermediateGroups: true
+    useBaseInternationalization: false
+
+settings:
+    base:
+        CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: NO
+        IPHONEOS_DEPLOYMENT_TARGET: 15.0
+
+fileGroups:
+    - project.yml
+    - .swiftlint.yml
+
+configFiles:
+    Debug: Configs/Project-Debug.xcconfig
+    Release: Configs/Project-Release.xcconfig
+
+
+targets:
+    FinanceMonitor:
+        configFiles:
+            Debug: Configs/FinanceMonitor/Debug.xcconfig
+            Release: Configs/FinanceMonitor/Release.xcconfig
+        dependencies:
+        - package:  XCoordinator
+        - package:  Depin
+        - package: CMExtensions
+          product: FoundationPlus
+        - package: CMExtensions
+          product: UIKitPlus
+        - package: CMExtensions
+          product: CombinePlus
+        - package: CMExtensions
+          product: AVFoundationPlus
+        - package: Lottie
+        platform: iOS
+
+        postCompileScripts:
+
+        -   name: Swiftlint
+            script: |
+                # Type a script or drag a script file from your workspace to insert its path.
+                export PATH="$PATH:/opt/homebrew/bin"
+                if which swiftlint > /dev/null; then
+                    swiftlint
+                else
+                    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+                fi
+            basedOnDependencyAnalysis: false
+
+        sources:
+        -   FinanceMonitor
+        -   Configs
+        type: application
+
+schemes:
+    FinanceMonitor:
+        build:
+            targets:
+                FinanceMonitor: all
