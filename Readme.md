@@ -5,6 +5,7 @@
  - Settings Module
  - New Payment Module
  - Complete authentication flow
+ - And a lot of other things 😅😅
 
 ## Setup Instructions
 
