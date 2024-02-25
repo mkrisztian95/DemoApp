@@ -13,7 +13,7 @@ To set up the project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mkrisztian95/FinanceMonitor.git
+   git clone [https://github.com/mkrisztian95/FinanceMonitor.git](https://github.com/mkrisztian95/DemoApp.git)
 
 2. Update Submodules
    ```bash
