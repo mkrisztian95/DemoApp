@@ -107,3 +107,5 @@ schemes:
         test:
             targets:
                 - name: FinanceMonitorTests
+            testPlans:
+                - path: FinanceMonitor/FinanceMonitorTests.xctestplan

@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "B2374FF1-5FAC-4BA9-94ED-79D6409C78E3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FinanceMonitor.xcodeproj",
+      "identifier" : "8F21A56C059BE7459F8C8DDD",
+      "name" : "FinanceMonitorTests"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FinanceMonitor.xcodeproj",
+        "identifier" : "8F21A56C059BE7459F8C8DDD",
+        "name" : "FinanceMonitorTests"
+      }
+    }
+  ],
+  "version" : 1
+}
