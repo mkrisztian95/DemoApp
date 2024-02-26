@@ -43,4 +43,13 @@ struct TransactionEntity: Decodable {
         let formatter = ISO8601DateFormatter()
         paid = formatter.date(from: paidString) ?? Date()
     }
+
+    init(id: String, summary: String, category: TransactionCategory, sum: Double, currency: String, paid: Date) {
+        self.id = id
+        self.summary = summary
+        self.category = category
+        self.sum = sum
+        self.currency = currency
+        self.paid = paid
+    }
 }

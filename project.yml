@@ -13,6 +13,16 @@ packages:
     Lottie:
         github: airbnb/lottie-ios.git
         from: 3.0.0
+    # for testing
+    Quick:
+        github: Quick/Quick
+        from: 6.0.0
+    Nimble:
+        github: Quick/Nimble
+        from: 11.0.0
+    Spry:
+        github: mkrisztian95/Spry
+        branch: master
 
 options:
     createItermediateGroups: true
@@ -68,9 +78,32 @@ targets:
         -   FinanceMonitor
         -   Configs
         type: application
+    FinanceMonitorTests:
+        dependencies:
+        -   package: Quick
+        -   package: Nimble
+        -   package: Spry
+        -   target: FinanceMonitor
+        platform: iOS
+        settings:
+            base:
+                BUNDLE_LOADER: $(TEST_HOST)
+                GENERATE_INFOPLIST_FILE: YES
+                TEST_HOST: $(BUILT_PRODUCTS_DIR)/FinanceMonitor.app/FinanceMonitor
+                INFOPLIST_FILE: FinanceMonitorTests/Info.plist
+        sources:
+        -   FinanceMonitorTests
+        type: bundle.unit-test
 
 schemes:
     FinanceMonitor:
         build:
             targets:
                 FinanceMonitor: all
+    FinanceMonitorTests:
+        build:
+            targets:
+                FinanceMonitorTests: [test, run]
+        test:
+            targets:
+                - name: FinanceMonitorTests

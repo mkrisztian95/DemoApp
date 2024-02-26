@@ -116,6 +116,5 @@ custom_rules:
 
 
 excluded:
-    - Plantzam\ UNIT\ Tests/*
-    - Plantzam\ UI\ Tests/*
+    - FinanceMonitorTests/*
     - Packages/*

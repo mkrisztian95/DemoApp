@@ -10,14 +10,14 @@ protocol GetTransactionsUseCaseProtocol {
 
 final class GetTransactionsUseCase {
 
-    private let networkService: TransactionsNetworkService
+    private let networkService: TransactionsNetworkServiceProtocol
 
     private var bag = CancelBag()
 
     @Published private var selectedFilters: [TransactionEntity.TransactionCategory] = []
     @Published private var transactions: TransactionModel?
 
-    init(networkService: TransactionsNetworkService) {
+    init(networkService: TransactionsNetworkServiceProtocol) {
         self.networkService = networkService
     }
 }
